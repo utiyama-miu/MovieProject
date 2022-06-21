@@ -11,6 +11,8 @@
 String password = (String)request.getAttribute("password");
 String id = (String)request.getAttribute("user_id");
 %>
-<a href = "/"></a>
+<a href ="/Movie_project/member_recive?id=<%=id%>&password=<%=password%>">予約確認/予約取り消し</a>
+<a href ="/Movie_project/Move_table">作品一覧に戻る</a>
+
 </body>
 </html>

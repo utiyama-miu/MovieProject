@@ -7,6 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
+<a href="/Movie_project/member_insert">会員登録</a>
 <%String failureMessage = (String)request.getAttribute("loginFailure"); %>
 
 <% if (failureMessage != null) {%>

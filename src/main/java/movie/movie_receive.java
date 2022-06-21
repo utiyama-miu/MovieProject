@@ -34,6 +34,20 @@ public class movie_receive {
 	public String get_seat() {
 		return seat;
 	}
+	public movie_receive(String userid,String password,String  mv_id,String year,String month,String day,String time,String seat){
+		this.userid=userid;
+		this.password=password;
+		this.mv_id=mv_id;
+		this.year=year;
+		this.month=month;
+		this.day=day;
+		this.time=time;
+		this.seat=seat;
+	}
+	public movie_receive(String seat){
+		
+		this.seat=seat;
+	}
 
 
 }

@@ -8,14 +8,16 @@ String mv_id =(String)request.getAttribute("mv_id");
 <html lang="ja">
 <head>
   <meta charset="utf-8">
-  <title><%=mc.getGengou() %>年<%=mc.getMonth() %>月カレンダー</title>
+  <title><%=mc.getMonth() %>月カレンダー</title>
   <link rel="stylesheet"  href="http://yui.yahooapis.com/3.18.1/build/cssreset/cssreset-min.css">
   <link href="https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c" rel="stylesheet">
   <link rel="stylesheet"  href="css/main.css">
 </head>
+<a href="?year=<%=mc.getYear()%>&month=7&mv_id=<%=mv_id%>">7月</a>
+<a href="?year=<%=mc.getYear()%>&month=8&mv_id=<%=mv_id%>">8月</a>
 <body>
   <div id="container">
-    <h1><%=mc.getGengou() %>年<%=mc.getMonth() %>月の予定上映日</h1>
+    <h1><%=mc.getMonth() %>月の予定上映日</h1>
     <p>
 		　
     </p>

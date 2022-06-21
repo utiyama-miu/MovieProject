@@ -48,16 +48,16 @@ public class member_Login extends HttpServlet {
 		// TODO Auto-generated method stub
 				String userId = request.getParameter("user_id");
 				String password = request.getParameter("password");
-				
+				//リクエストパラメータを取得
 
 				String path = "";
 
 				try {
 					// PostgreSQLに接続するためのURL
 					String url = "jdbc:postgresql://localhost:5432/sampledb";
-					String user = "postgres";
-					String pass = "postgres";
-					String sql = "SELECT * FROM login WHERE id=? AND password=?";
+					String user = "postgres"; //ostgreSQLに接続するためのuser
+					String pass = "postgres"; //ostgreSQLに接続するためのpass
+					String sql = "SELECT * FROM login WHERE id=? AND password=?"; //実行するsql文
 
 					// PostgreSQLに接続する
 					Class.forName("org.postgresql.Driver");
@@ -66,6 +66,7 @@ public class member_Login extends HttpServlet {
 
 						pstmt.setString(1, userId);
 						pstmt.setString(2, password);
+						//sqlのパラメータを設定
 
 						ResultSet res = pstmt.executeQuery();
 
@@ -73,14 +74,14 @@ public class member_Login extends HttpServlet {
 						if (res.next()) {
 							request.setAttribute("user_id", res.getString("id"));
 							request.setAttribute("password", res.getString("password"));
-							
+							//スコープでデータを設定する為のやつ
 
 
 							path = "/WEB-INF/member_page.jsp";
 						} else {
 							request.setAttribute("loginFailure", "ログインに失敗しました");
 
-							// ログインに失敗したときはもう一度ログイン画面を表示する
+							// ログインに失敗したときのpath
 							path = "/WEB-INF/member_login.jsp";
 						}
 					}
@@ -89,7 +90,9 @@ public class member_Login extends HttpServlet {
 				}
 
 				RequestDispatcher rd = request.getRequestDispatcher(path);
+				//ServletからJSPを表示するためのインターフェイスでpathを指定
 				rd.forward(request, response);
+				//path指定のJSPへ飛ばす
 	}
 
 }

@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-<p>予約が完了しました。</p>
-<a href="/Movie_project/Move_table">作品一覧へ戻る</a>
+<p>削除が完了しました。</p>
+<a href="/Movie_project/Move_table">作品一覧に戻る</a>
 </body>
 </html>

@@ -5,11 +5,12 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>乃木坂メンバー50音順一覧</title>
+<title>上映中映画一覧</title>
 </head>
 <body>
 	<% List<movie_table> books = (List<movie_table>)request.getAttribute("movie_table"); %>
-	<a href="/member_Login/member_Login">ログイン</a>
+	<a href="/Movie_project/member_Login">ログイン</a>
+	<a href="/Movie_project/member_insert">会員登録</a>
 	<table>
 	<tr>
 	<th>映画タイトル</th>

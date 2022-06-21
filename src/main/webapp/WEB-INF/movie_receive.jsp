@@ -34,8 +34,8 @@ String seat =(String)request.getAttribute("seat");
 </tr>
 </table>
 <a href="/Movie_project/Movie_receive2?seat=<%=seat%>&mv_id=<%=mv_id%>&year=<%=year%>&month=<%=month%>&day=<%=day%>&time=<%=time%>&user_id=<%=userId%>&pass=<%=password%>">予約完了</a>
-<form action="/Movie_project/movie_table" method="get">
-	<input  type="submit" value="キャンセル">
+<a href="/Movie_project/movie_Move_table">キャンセル/作品一覧に戻る</a>
+	<
 </form>
 </body>
 </body>

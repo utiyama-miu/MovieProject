@@ -53,7 +53,7 @@ public class Movie_Calendar2 {
 	Calendar Cl_set=Calendar.getInstance();
 
 	Cl_set.set(Calendar.YEAR, 2022);
-	Cl_set.set(Calendar.MONTH, 12);
+	Cl_set.set(Calendar.MONTH, 7);
      Cl_set.set(Calendar.DATE, 1);
 	
 	
@@ -69,9 +69,7 @@ public class Movie_Calendar2 {
 				data[i][j]=String.valueOf(date);
 				//今作業しているマイカレンダーが今月のカレンダーだったら今日の日付の先頭に*を付与する
 				if(now.get(Calendar.DATE)<= date && now.get(Calendar.MONTH)==mc.getMonth()-1  && now.get(Calendar.YEAR)==mc.getYear()
-						
-						
-					) {
+						||  Cl_set.get(Calendar.MONTH)<=mc.getMonth()  && now.get(Calendar.YEAR)<=mc.getYear() && Cl_set.get(Calendar.DATE)<= date ) {
 					data[i][j]="*"+data[i][j];
 				}
 			}
