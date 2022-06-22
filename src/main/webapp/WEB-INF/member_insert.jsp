@@ -11,7 +11,7 @@
 <form action="/Movie_project/member_insert" method="post">
 	id:<input type="text" name="user_id"><br><br>
 	name:<input type="password" name="password"><br><br>
-	<input  type="submit" value="ログイン">
+	<input  type="submit" value="登録">
 </form>
 </body>
 </html>

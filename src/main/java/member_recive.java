@@ -69,8 +69,9 @@ public class member_recive extends HttpServlet {
 
 	            //処理件数を表示する
 	            while(res.next()) {
-	            	request.setAttribute("user_id", res.getString("id"));
+	            	request.setAttribute("user_id1", res.getString("id"));
 					request.setAttribute("password", res.getString("password"));
+					String id1= res.getString("id");
 					String ps_ = res.getString("password");
 					String userid = res.getString("user_id");
 					String mv_id = res.getString("mv_id");
@@ -80,7 +81,7 @@ public class member_recive extends HttpServlet {
 					String time = res.getString("time");
 					String seat = res.getString("seat");
 					
-					movie1.add(new movie_receive(userid,ps_,mv_id,year,month,day,time,seat));
+					movie1.add(new movie_receive(id1,userid,ps_,mv_id,year,month,day,time,seat));
 
 				}
 				

@@ -33,14 +33,9 @@ public class Receive_delete extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		//文字化けのやつ入れる
-		String userId=request.getParameter("user_id");
-		String pass=request.getParameter("password");
-		String mv_id=request.getParameter("mv_id");
-		String year=request.getParameter("year");
-		String month=request.getParameter("month");
-		String day=request.getParameter("day");
-		String time=request.getParameter("time");
-		String seat=request.getParameter("seat");
+		String userId=request.getParameter("id");
+		int id1 =Integer.parseInt(userId);
+		
 		
 		
 		Connection conn = null;
@@ -52,7 +47,7 @@ public class Receive_delete extends HttpServlet {
         String pw = "postgres";  //ログインパスワード
 
         //SQL文を定義する
-        String sql = "DELETE FROM movie_receive WHERE user_id=? AND password=? AND year=? AND month=? AND day=? AND seat=? AND time=? AND mv_id=? ";
+        String sql = "delete from movie_receive where id=? ";
 
         try {
             //JDBCドライバをロードする
@@ -63,16 +58,11 @@ public class Receive_delete extends HttpServlet {
 
             //実行するSQL文とパラメータを指定する
             ps = conn.prepareStatement(sql);
-            ps.setString(1, userId);
-            ps.setString(2,pass);
-            ps.setString(3, year);
-            ps.setString(4,month);
-            ps.setString(5, day);
-            ps.setString(6,seat);
-            ps.setString(7, time);
-            ps.setString(8,mv_id);
+            ps.setInt(1, id1);
+           
 
             ps.executeUpdate();
+            conn.commit();
         } catch (Exception ex) {
             //例外発生時の処理
             ex.printStackTrace();  //エラー内容をコンソールに出力する

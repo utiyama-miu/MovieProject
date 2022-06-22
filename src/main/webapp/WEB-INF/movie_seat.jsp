@@ -21,7 +21,6 @@ String time =(String)request.getAttribute("time");
 <th>A</th>
 
 
-
 <td><a href="/Movie_project/Movie_Login?seat=<%=seat[0]%>&mv_id=<%=mv_id%>&year=<%=year%>&month=<%=month%>&day=<%=day%>&time=<%=time%>"><%=seat[0]%></a></td>
 
 

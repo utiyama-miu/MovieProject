@@ -9,6 +9,7 @@ public class movie_receive {
 	private String day;
 	private String time;
 	private String seat;
+	private String id;
 	
 	public String get_userid() {
 		return userid;
@@ -34,7 +35,10 @@ public class movie_receive {
 	public String get_seat() {
 		return seat;
 	}
-	public movie_receive(String userid,String password,String  mv_id,String year,String month,String day,String time,String seat){
+	public String get_id() {
+		return id;
+	}
+	public movie_receive(String id,String userid,String password,String  mv_id,String year,String month,String day,String time,String seat){
 		this.userid=userid;
 		this.password=password;
 		this.mv_id=mv_id;
@@ -43,6 +47,7 @@ public class movie_receive {
 		this.day=day;
 		this.time=time;
 		this.seat=seat;
+		this.id=id;
 	}
 	public movie_receive(String seat){
 		

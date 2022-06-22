@@ -9,6 +9,7 @@
 <body>
 <%
 List<movie_receive> movie = (List<movie_receive>)request.getAttribute("movie_receive");
+
 %>
 <table>
 	<tr>
@@ -24,7 +25,7 @@ List<movie_receive> movie = (List<movie_receive>)request.getAttribute("movie_rec
 	<td><%=members.get_month() %>月<%=members.get_day() %>日</td>
 	<td><%=members.get_time() %></td>
 	<td><%=members.get_seat() %></td>
-	<td><a href="/Movie_project/Receive_delete?password=<%=members.get_password() %>&user_id=<%=members.get_userid() %>&mv_id=<%=members.get_mv_id() %>&year=<%=members.get_year() %>&month=<%=members.get_month() %>&day=<%=members.get_day() %>&time=<%=members.get_time() %>&seat=<%=members.get_seat() %>">予約削除</a></td>
+	<td><a href="/Movie_project/Receive_delete?id=<%= members.get_id() %>">予約削除</a></td>
 	</tr>
 	<%} %>
 	</table>
